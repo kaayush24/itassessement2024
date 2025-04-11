@@ -1,0 +1,241 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    nav {
+      background: #2c3e50;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.8rem;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 10px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #3498db;
+    }
+
+    .hero {
+      background: #3498db;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+
+    .services-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .service {
+      background: #fff;
+      padding: 25px;
+      width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .service h3 {
+      font-size: 1.8rem;
+      color: #3498db;
+      margin-bottom: 15px;
+    }
+
+    .service p {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #3498db;
+      margin: 0 10px;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        margin-top: 10px;
+        background-color: #2c3e50;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      nav ul li {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .service {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container">
+      <a href="index.html" class="logo">Aayush Kadel</a>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="service.html">Service</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Our College Services</h1>
+      <p>See all the services that our college provides.</p>
+    </div>
+  </section>
+
+  <div class="container services-section">
+    <div class="service">
+      <h3>Academic Counseling</h3>
+      <p>Skilled counselors help students in their career counseling.</p>
+    </div>
+
+    <div class="service">
+      <h3>Internship Opportunities</h3>
+      <p>Our college have partenered up with many institutions for providing internship opportunity to students. </p>
+    </div>
+
+    <div class="service">
+      <h3>Student Workshops</h3>
+      <p>Our college organize several programs in fields such as cybersecurity, AI, etc. to promote student's skills.</p>
+    </div>
+
+    <div class="service">
+      <h3>Career Services</h3>
+      <p>Our college have partnered with top Nepalese company which can provide employment opportunities to students. </p>
+    </div>
+
+    <div class="service">
+      <h3>On Campus Accommodation</h3>
+      <p>Our college have on campus accomodation which can help students coming from outside during their study. </p>
+    </div>
+
+    <div class="service">
+      <h3>Health and Wellness</h3>
+      <p>Our college provides several health programs including physical health, mental health support to students. </p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Aayush Kadel. All Rights Reserved.</p>
+      <p>Kathmandu, Nepal</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
